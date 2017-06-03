@@ -61,3 +61,10 @@ extension UserDefaults {
         }
         return user
     }
+
+   func deleteAllPersistedData(){
+
+        UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+        UserDefaults.standard.synchronize()
+    
+    }
