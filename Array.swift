@@ -4,8 +4,6 @@
 //  Created by Yoel Lev on 5/1/17.
 //
 
-
-
 import Foundation
 
 
@@ -77,8 +75,6 @@ extension Array where Element: Comparable {
     
     
     //MARK: - Linear Search
-    
-    
      /*
      linear search algorithm - use fast enumeration to iterate through a sequence
      of values. performance of O(n).
