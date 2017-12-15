@@ -111,4 +111,21 @@ extension String {
     }
     
     
+        // Verifies if an string is a valid email format. Nice for login screens.
+    
+    func checkIfValidEmail() -> Bool {
+        let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
+        
+        return emailPredicate.evaluate(with: self)
+    }
+    
+    // It's common to get back server data with underscores in it. This removes them.
+    // Example: "new_movies" will change to "New Movies"
+    
+    func titleize() -> String {
+        return self.replacingOccurrences(of: "_", with: " ").capitalized
+    }
+    
+    
 }
