@@ -68,4 +68,16 @@ extension UIButton {
         layer.borderColor = color.cgColor
         layer.borderWidth = width
     }
+    
+  
+    func addBlurEffect(){
+        let blur = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+        blur.frame = self.bounds
+        blur.isUserInteractionEnabled = false
+        self.insertSubview(blur, at: 0)
+        if let imageView = self.imageView{
+            self.bringSubview(toFront: imageView)
+        }
+ 
 }
+    
